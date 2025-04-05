@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-      <p>{angka}</p>
+      <p className={angka % 2 === 0 ? "text-red-500" : "text-green-500"}>
+        {angka}
+      </p>
       <button onClick={() => setAngka(angka + 1)}>Tambah</button>
       <button
         onClick={angka > 0 ? () => setAngka(angka - 1) : () => setAngka(0)}
